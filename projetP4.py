@@ -9,7 +9,7 @@ player = 0
 liste_couleurs = [0]
 a = WIDTH//7
 variable_efface = []
-#edgar le hagar
+
 racine = tk.Tk()
 canvas = tk.Canvas(racine, height = HEIGHT, width=WIDTH, bg = "blue")
 canvas.grid()
