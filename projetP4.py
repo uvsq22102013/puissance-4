@@ -1,6 +1,6 @@
 import tkinter as tk
 import time
-
+#Ali la massue
 HEIGHT = 530
 WIDTH = 600
 ec = 15
