@@ -1,6 +1,6 @@
 import tkinter as tk
 import time
-#Ali la massue
+
 HEIGHT = 530
 WIDTH = 600
 ec = 15
@@ -9,7 +9,7 @@ player = 0
 liste_couleurs = [0]
 a = WIDTH//7
 variable_efface = []
-
+#edgar le hagar
 racine = tk.Tk()
 canvas = tk.Canvas(racine, height = HEIGHT, width=WIDTH, bg = "blue")
 canvas.grid()
@@ -18,6 +18,8 @@ for n in range(6):
     for i in range(7):
         obj.append(canvas.create_oval((0+(70+ec)*i,20+(70+ec)*n),(70+(70+ec)*i,(70+20)+(70+ec)*n), fill = "white"))
         liste_couleurs.append(0)
+
+
 
 def couleur(x):
     global obj, liste_couleurs, player, variable_efface
