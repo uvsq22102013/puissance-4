@@ -30,6 +30,7 @@ def couleur(x):
     i=5
     if liste_couleurs[0][x]!=0:
         pass
+        player -=1
     elif player%2 == 0:
         col = "red"
         y = 1
