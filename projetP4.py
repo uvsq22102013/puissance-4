@@ -27,7 +27,7 @@ for n in range(6):
 
 def couleur(x):
     global obj, liste_couleurs, player, variable_efface
-    i=5
+    r=5
     if liste_couleurs[0][x]!=0:
         pass
         player -=1
@@ -38,9 +38,11 @@ def couleur(x):
         col = "yellow"
         y = 2
     while liste_couleurs[i][x] != 0:
-        i -=1
-    print(y)
-        
+        r -=1
+
+
+
+
     canvas.itemconfigure(obj[i][x], fill = col)
     variable_efface.append([i,x])
     liste_couleurs[i][x] = y
@@ -67,38 +69,43 @@ def clic(event):
     player += 1
     if 0 < event.x < 77:
         couleur(0)
-        gagnant()
     elif 78 < event.x < 162:
-        couleur(1)
-        gagnant()
+        couleur(1)      
     elif 163 < event.x < 247:
         couleur(2)
-        gagnant()
     elif 248 < event.x < 332:
-        couleur(3)
-        gagnant()   
+        couleur(3)         
     elif 333 < event.x < 417:
-        couleur(4)
-        gagnant()
+        couleur(4)     
     elif 418 < event.x < 502:
-        couleur(5)
-        gagnant()
+        couleur(5)       
     elif 503 < event.x < 600:
         couleur(6)
-        gagnant()
+        
 
-def gagnant():
-    global liste_couleurs
+def gagnant(r,x):
+    global liste_couleurs,player
     cpt = 0
     for i in range (7):
         c=-3
-        if liste_couleurs[x] == liste_couleurs[x+c]:
+        if liste_couleurs[r][x] == liste_couleurs[r+c][x]:
             cpt += 1
             print(cpt)
         else:
             cpt = 0
         if cpt == 4 :
             print("gagnant")
+        c=c+1
+    for i in range (7):
+        c=-3
+        if liste_couleurs[r][x] == liste_couleurs[r][x+c]:
+            cpt += 1
+            print(cpt)
+        else:
+            cpt = 0
+        if cpt == 4 :
+            print("gagnant")
+        c=c+1
         
 
 
