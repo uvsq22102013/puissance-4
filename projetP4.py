@@ -43,7 +43,7 @@ def couleur(x):
     canvas.itemconfigure(obj[r][x], fill = col)
     variable_efface.append([r,x])
     liste_couleurs[r][x] = y
-    gagnant(r,x)
+
 
 def efface():
     global variable_efface, obj
@@ -67,49 +67,60 @@ def clic(event):
     player += 1
     if 0 < event.x < 77:
         couleur(0)
-        
+        gagnant()
     elif 78 < event.x < 162:
         couleur(1)
-        
+        gagnant()
     elif 163 < event.x < 247:
         couleur(2)
-        
+        gagnant()
     elif 248 < event.x < 332:
         couleur(3)
-          
+        gagnant()
     elif 333 < event.x < 417:
         couleur(4)
-        
+        gagnant()
     elif 418 < event.x < 502:
         couleur(5)
-        
+        gagnant()
     elif 503 < event.x < 600:
         couleur(6)
-        
+        gagnant()
 
-def gagnant(r,x):
-    global liste_couleurs,player
-    cpt = 0
-    for i in range (7):
-        c=-3
-        if liste_couleurs[r][x] == liste_couleurs[r+c][x]:
-            cpt += 1
-            print(cpt)
-        else:
-            cpt = 0
-        if cpt == 4 :
-            print("gagnant")
-        c=c+1
-    for i in range (7):
-        c=-3
-        if liste_couleurs[r][x] == liste_couleurs[r][x+c]:
-            cpt += 1
-            print(cpt)
-        else:
-            cpt = 0
-        if cpt == 4 :
-            print("gagnant")
-        c=c+1
+def gagnant():
+    global liste_couleurs
+    cpt_r = 0
+    cpt_j = 0
+    for i in range(6):
+        for j in range(7):
+            if liste_couleurs[i][j] == 1:
+                cpt_r +=1
+            else:
+                cpt_r = 0
+            if liste_couleurs[i][j] == 2:
+                cpt_j +=1
+            else:
+                cpt_j = 0
+            if cpt_r == 4:
+                print("gagnant rouge")
+            if cpt_j == 4:
+                print("gagnant jaune")
+    for i in range(7):
+        for j in range(6):
+            if liste_couleurs[j][i] == 1:
+                cpt_r +=1
+            else:
+                cpt_r = 0
+            if liste_couleurs[j][i] == 2:
+                cpt_j +=1
+            else:
+                cpt_j = 0
+            if cpt_r == 4:
+                print("gagnant rouge")
+                pass
+            if cpt_j == 4:
+                print("gagnant jaune")
+                pass
         
 
 
