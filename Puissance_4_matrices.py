@@ -56,6 +56,7 @@ def efface():
 
 
 
+
 def clic(event):
     global player
     if cond_start == True:
@@ -114,6 +115,21 @@ def gagnant():
                 print("gagnant rouge, col")
             if cpt_j == 4:
                 print("gagnant jaune, col")
+    for i in range(3):
+        for j in range(6-i):
+            if liste_couleurs[i+j][0+j] == 1:
+                cpt_r += 1
+            else :
+                cpt_r = 0
+            if liste_couleurs[0+j][0+j] == 2:
+                cpt_j += 1
+            else :
+                cpt_j = 0
+            if cpt_r == 4:
+                    print("gagnant rouge, diag")
+            if cpt_j == 4:
+                    print("gagnant jaune, diag")
+
     
 def start():
     global name_P1,name_P2, cond_start
