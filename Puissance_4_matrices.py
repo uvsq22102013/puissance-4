@@ -121,7 +121,7 @@ def gagnant():
                 cpt_r += 1
             else :
                 cpt_r = 0
-            if liste_couleurs[0+j][0+j] == 2:
+            if liste_couleurs[i+j][0+j] == 2:
                 cpt_j += 1
             else :
                 cpt_j = 0
@@ -129,6 +129,20 @@ def gagnant():
                     print("gagnant rouge, diag")
             if cpt_j == 4:
                     print("gagnant jaune, diag")
+    for i in range(3):
+        for j in range(6-i):
+            if liste_couleurs[j][1+i+j] == 1:
+                cpt_r += 1
+            else :
+                cpt_r = 0
+            if liste_couleurs[j][1+i+j] == 2:
+                cpt_j += 1
+            else :
+                cpt_j = 0
+            if cpt_r == 4:
+                print("gagnant rouge, diag2")
+            if cpt_j == 4:
+                print("gagnant jaune, diag2")
 
     
 def start():
