@@ -1,3 +1,12 @@
+##################################
+# groupe MI 3
+# Edgar BAGHDASARYAN
+# Ali HARGAS
+# Hatim ZELAMTA
+# Anis FETOUAB
+# https://github.com/uvsq22102013/puissance-4.git
+###################################
+
 import tkinter as tk
 from tkinter import*
 import random
@@ -253,6 +262,7 @@ def new_game():
     liste_couleurs = []
     obj = []
     create_oval()
+    start()
 
 def gagnant_rouge():
     """affichage du nom du gagant ayant les pions rouges"""
