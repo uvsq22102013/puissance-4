@@ -85,7 +85,10 @@ def couleur(x):
     """fonction définissant la couleur du pion en alternant entre rouge et jaune,
     puis elle repère un emplacement vide dans la colonne afin d'y afficher le pion déposé par le joueur"""
     global obj, liste_couleurs, player, variable_efface
-    if player%2 == 0:
+    if liste_couleurs[0][x]!=0:
+        pass
+        player -=1
+    elif player%2 == 0:
         col = "red"
         y = 1
     else:
@@ -297,7 +300,6 @@ bouton1.pack(side = "bottom")
 bouton2.pack(side = "top")
 bouton3.pack(side = "bottom")
 bouton4.pack(side = "bottom")
-
 
 canvas.bind("<Button-1>", clic)
 racine.mainloop()
