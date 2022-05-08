@@ -59,28 +59,28 @@ def clic(event):
     et la fonction qui repère le gagnant (s'il y en a un)"""
     global player
     if cond_start == True:
-        if 0 < event.x < 70:
+        if 0 < event.x < 77:
             couleur(0)
             gagnant()
-        elif 85 < event.x < 155:
+        elif 78 < event.x < 162:
             couleur(1)
             gagnant()
-        elif 170 < event.x < 240:
+        elif 163 < event.x < 247:
             couleur(2)
             gagnant()
-        elif 255 < event.x < 325:
+        elif 248 < event.x < 332:
             couleur(3)
-            gagnant()   
-        elif 340 < event.x < 410:
+            gagnant()
+        elif 333 < event.x < 417:
             couleur(4)
             gagnant()
-        elif 425 < event.x < 495:
+        elif 418 < event.x < 502:
             couleur(5)
             gagnant()
-        elif 510 < event.x < 580:
+        elif 503 < event.x < 600:
             couleur(6)
             gagnant()
-
+            
 def couleur(x):
     """fonction définissant la couleur du pion en alternant entre rouge et jaune,
     puis elle repère un emplacement vide dans la colonne afin d'y afficher le pion déposé par le joueur"""
