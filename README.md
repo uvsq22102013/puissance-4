@@ -1,4 +1,13 @@
 # puissance-4
+
+# groupe MI 3
+# Edgar BAGHDASARYAN
+# Ali HARGAS
+# Hatim ZELAMTA
+# Anis FETOUAB
+# https://github.com/uvsq22102013/puissance-4.git
+
+
 Mêmes règles de jeu que le puissance 4 normal.
 
 Afin de commencer la partie, il faut écrire le nom de chacun des joueurs dans les zones de texte dédiées puis il faut cliquer sur START.
